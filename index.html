@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Jurídico - [Nombre del Despacho]</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>[Nombre del Despacho Jurídico]</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#cobertura">Cobertura</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <img src="images/despacho.jpg" alt="Foto del Despacho Jurídico" class="hero-image">
+                <h2>Experiencia Legal Confiable en [Tu Estado/Ciudad Principal]</h2>
+                <p>Brindamos asesoría y representación legal de primer nivel en asuntos civiles, mercantiles y laborales.</p>
+                <a href="#contacto" class="btn">Agenda una consulta</a>
+            </div>
+        </section>
+
+        <section id="nosotros" class="section-padded">
+            <div class="container">
+                <h2>Nuestro Equipo</h2>
+                <div class="about-content">
+                    <img src="images/abogado.jpg" alt="Foto del Abogado [Tu Nombre]" class="profile-image">
+                    <div class="bio-text">
+                        <h3>Lic. [Tu Nombre Completo]</h3>
+                        <p>Abogado con más de XX años de experiencia, especializado en [menciona 1-2 áreas clave]. Nuestra misión es ofrecer soluciones legales efectivas y personalizadas, siempre con un enfoque ético y profesional. Nos dedicamos a proteger los intereses de nuestros clientes, garantizando un servicio de excelencia.</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="section-padded bg-light">
+            <div class="container">
+                <h2>Nuestras Áreas de Práctica</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Asuntos Civiles</h3>
+                        <p>Representación en litigios sobre contratos, propiedades, herencias, responsabilidades civiles, divorcios y más.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Asuntos Mercantiles</h3>
+                        <p>Asesoría en constitución de sociedades, contratos mercantiles, litigio empresarial, propiedad intelectual y derecho corporativo.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Asuntos Laborales</h3>
+                        <p>Defensa y asesoría en despidos injustificados, contratos laborales, acoso laboral, seguridad social y cumplimiento normativo.</p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="cobertura" class="section-padded">
+            <div class="container">
+                <h2>Nuestra Cobertura</h2>
+                <p class="text-center">Ofrecemos nuestros servicios legales en las siguientes localidades:</p>
+                <ul class="location-list">
+                    <li><i class="fas fa-map-marker-alt"></i> República Mexicana (a nivel nacional)</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Querétaro</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Estado de México (Edomex)</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ciudad de México (CDMX)</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Chihuahua</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contacto" class="section-padded bg-light">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p class="text-center">Estamos listos para atenderte. Envíanos un mensaje o llámanos directamente.</p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+525512345678">[+52 55 1234 5678]</a></p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:contacto@tudespacho.com">[contacto@tudespacho.com]</a></p>
+                        <p><i class="fas fa-map-marked-alt"></i> Dirección: [Tu Dirección Completa, Ciudad, CP]</p>
+                        <p><i class="fas fa-clock"></i> Horario: Lunes a Viernes 9:00 - 18:00 hrs</p>
+                    </div>
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono (opcional):</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Tu mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15000.00!2d-99.123456!3d19.456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ5JzQ0LjMiTiA5OcKwMjglMjAwLjUiVw!5e0!3m2!1ses-419!2smx!4v1678901234567" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Nombre del Despacho Jurídico]. Todos los derechos reservados.</p>
+            <p>Diseñado por [Tu Nombre o Empresa si aplica]</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
