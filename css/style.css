@@ -1,195 +1,101 @@
-/* ===========================
-   Versión 1: CSS mejorado para tu HTML
-   =========================== */
-
+/* Estilos Generales */
 :root {
-    --primary-color: #00332E; /* Verde más sobrio, profesional */
-    --secondary-color: #00594E;
-    --accent-color: #D4AF37; /* Dorado elegante */
-    --text-color: #333;
-    --light-bg: #f4f4f4;
-    --white: #fff;
-    --dark-grey: #444;
-}
+    --primary-color: #2B2B2B; /* Gris Carbón para header, footer, títulos */
+    --secondary-color: #8C734B; /* Dorado Danorte para acentos y CTAs */
+    --accent-color: #8C734B; /* Mismo Dorado para acentos principales */
+    --text-color-dark: #4A4A4A; /* Gris oscuro para textos de párrafo */
+    --text-color-light: #F8F8F8; /* Blanco roto para texto sobre fondos oscuros */
+    --background-light: #F8F8F8; /* Fondo general de las secciones claras */
+    --background-dark: #2B2B2B; /* Fondo para secciones oscuras como header/footer */
+    --btn-text-color: #F8F8F8; /* Color del texto dentro de los botones dorados */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    /* Opcional: para enlaces o énfasis menor */
+    --optional-contrast-color: #00204A; /* Azul Marino Profundo */
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--white);
-    color: var(--text-color);
+    font-family: 'Arial', sans-serif; /* O una fuente serif elegante si te gusta, como 'Georgia', 'Playfair Display' */
     line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    color: var(--text-color-dark); /* Color principal del texto */
+    background-color: var(--background-light); /* Fondo general de la página */
 }
 
 h1, h2, h3 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Títulos principales en Gris Carbón */
     margin-bottom: 20px;
     text-align: center;
 }
 
-h2 {
-    font-size: 2.5rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-}
-
 a {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Enlaces en Dorado Danorte */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+    color: var(--secondary-color); /* O un tono más claro del dorado si lo tienes */
 }
 
 .btn {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: var(--secondary-color); /* Botones en Dorado Danorte */
+    color: var(--btn-text-color); /* Texto del botón en blanco roto para contraste */
+    /* ... otros estilos del botón ... */
 }
 
 .btn:hover {
-    background-color: #e1c25e;
+    background-color: #A38C69; /* Un tono ligeramente más claro o saturado del dorado al pasar el mouse */
 }
 
+/* Header */
 header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: var(--background-dark); /* Fondo del header en Gris Carbón */
+    color: var(--text-color-light); /* Texto del header en blanco roto */
+    /* ... otros estilos del header ... */
 }
 
 header h1 {
-    font-size: 2rem;
-    color: var(--white);
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    color: var(--text-color-light); /* Título del header en blanco roto */
 }
 
 header nav ul li a {
-    color: var(--white);
-    font-weight: 500;
+    color: var(--text-color-light); /* Enlaces de navegación en blanco roto */
 }
 
+header nav ul li a:hover {
+    color: var(--accent-color); /* Links de navegación al hover en Dorado Danorte */
+}
+
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpg') center/cover no-repeat;
-    color: var(--white);
-    text-align: center;
-    padding: 100px 20px;
+    background: linear-gradient(rgba(43, 43, 43, 0.6), rgba(43, 43, 43, 0.6)), url('../images/despacho.jpg') no-repeat center center/cover; /* Oscurece la imagen para que el texto blanco resalte */
+    color: var(--text-color-light); /* Texto de la hero en blanco roto */
+    /* ... otros estilos ... */
 }
 
 .hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    color: var(--text-color-light); /* Título de la hero en blanco roto */
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
+/* Services Section */
+.service-item i {
+    color: var(--secondary-color); /* Iconos en Dorado Danorte */
 }
 
-.about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 0;
+.service-item h3 {
+    color: var(--primary-color); /* Título del servicio en Gris Carbón */
 }
 
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--secondary-color);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Contact Info */
+.contact-info i {
+    color: var(--secondary-color); /* Iconos de contacto en Dorado Danorte */
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.service-item {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-}
-
-.contact-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.contact-info p, .contact-info i {
-    font-size: 1.1rem;
-    color: var(--dark-grey);
-}
-
+/* Footer */
 footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 30px 0;
-    text-align: center;
-    margin-top: 50px;
+    background-color: var(--background-dark); /* Fondo del footer en Gris Carbón */
+    color: var(--text-color-light); /* Texto del footer en blanco roto */
 }
 
 footer p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-@media (min-width: 768px) {
-    .about-content {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .contact-grid {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    color: rgba(248, 248, 248, 0.7); /* Un blanco roto más suave para el texto del footer */
 }
