@@ -17,22 +17,36 @@ body {
 .btn-primary {
     background-color: var(--color-primary);
     color: white;
+    border-radius: 0.5rem; /* Mejora estética */
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
+
 .btn-primary:hover {
     background-color: var(--color-primary-hover);
 }
+
 .text-primary {
     color: var(--color-primary);
 }
+
 .bg-secondary {
     background-color: var(--color-secondary);
 }
+
 .section-title-underline {
     width: 6rem;
     height: 4px;
     background-color: var(--color-primary);
     margin: 0 auto 3rem auto;
 }
+
+/* Iconos en items de servicios */
+.service-item i {
+    transition: transform 0.3s ease;
+}
+
 .service-item:hover i {
     transform: scale(1.1);
 }
@@ -49,11 +63,11 @@ body {
     transform: translateY(0);
 }
 
-
 /* Clases para enfocar elementos del formulario */
 .focus\:ring-primary:focus {
     --tw-ring-color: var(--color-primary);
 }
+
 .focus\:border-primary:focus {
     border-color: var(--color-primary);
 }
