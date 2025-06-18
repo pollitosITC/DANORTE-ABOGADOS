@@ -1,103 +1,145 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DANORTE ABOGADOS - Daniel Ortega</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-white text-gray-800">
 
-    <header>
-        <nav>
-            <a href="#" class="brand">
-                DANORTE ABOGADOS<br>
-                <span>Daniel Ortega</span>
-            </a>
-
-            <button id="menu-toggle">☰</button>
-
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contáctanos</a></li>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <a href="#" class="text-2xl font-bold text-primary block leading-tight">DANORTE ABOGADOS</a>
+                <span class="text-sm text-gray-500">DANIEL ORTEGA GUERRA</span>
+            </div>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="#inicio" class="text-gray-600 hover:text-primary transition-colors">Inicio</a></li>
+                <li><a href="#nosotros" class="text-gray-600 hover:text-primary transition-colors">Nuestra Firma</a></li>
+                <li><a href="#servicios" class="text-gray-600 hover:text-primary transition-colors">Servicios</a></li>
+                <li><a href="#cobertura" class="text-gray-600 hover:text-primary transition-colors">Cobertura</a></li>
+                <li><a href="#contacto" class="text-gray-600 hover:text-primary transition-colors">Contacto</a></li>
             </ul>
+            <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
         </nav>
-
-        <div id="mobile-menu">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contáctanos</a></li>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <li><a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Inicio</a></li>
+                <li><a href="#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Nuestra Firma</a></li>
+                <li><a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Servicios</a></li>
+                <li><a href="#cobertura" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Cobertura</a></li>
+                <li><a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Contacto</a></li>
             </ul>
         </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <img src="tu-imagen.jpg" alt="Fachada del despacho">
-        <div class="overlay">
-            <h2>Litigio y Asesoría Jurídica</h2>
-            <p>Soluciones legales con compromiso, ética y excelencia.</p>
-            <a href="#contacto" class="btn-primary">Agenda una consulta</a>
-        </div>
-    </section>
-
-    <section id="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <div class="section-title-underline"></div>
-        <p style="max-width: 800px; margin: 0 auto; text-align: center;">
-            En DANORTE Abogados nos especializamos en ofrecer asesoría jurídica personalizada,
-            basada en la confianza, experiencia y resultados. Nuestro equipo tiene amplia trayectoria en litigio civil, mercantil y familiar.
-        </p>
-    </section>
-
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <div class="section-title-underline"></div>
-        <div style="display: grid; gap: 2rem; max-width: 1000px; margin: 2rem auto; padding: 0 1rem;">
-            <div class="service-item fade-in-element">
-                <i>⚖️</i>
-                <h3>Litigio Civil</h3>
-                <p>Representación legal en casos civiles, contratos, arrendamientos, responsabilidad civil y más.</p>
+    <main>
+        <!-- Sección Hero -->
+        <section id="inicio" class="relative text-white text-center">
+            <img src="https://placehold.co/1200x600/111827/e5e7eb?text=Despacho+Jur%C3%ADdico" alt="Imagen de fondo" class="w-full h-[60vh] object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center p-6">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Experiencia Legal Confiable</h2>
+                <p class="text-lg md:text-xl max-w-3xl mb-8">Asesoría y representación en asuntos civiles, mercantiles, laborales, administrativos y familiares.</p>
+                <a href="#contacto" class="btn-primary font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105">Agendar Consulta</a>
             </div>
-            <div class="service-item fade-in-element">
-                <i>📜</i>
-                <h3>Asesoría Legal</h3>
-                <p>Consultoría jurídica para personas físicas y empresas: contratos, constitución de sociedades y prevención de conflictos.</p>
-            </div>
-            <div class="service-item fade-in-element">
-                <i>👨‍👩‍👧</i>
-                <h3>Derecho Familiar</h3>
-                <p>Asuntos de divorcio, custodia, pensión alimenticia y sucesiones con enfoque humano y legal.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contacto">
-        <h2>Contáctanos</h2>
-        <div class="section-title-underline"></div>
-        <p style="text-align: center; margin-bottom: 1rem;">Escríbenos o visítanos. Estamos para ayudarte.</p>
-        <div style="text-align: center;">
-            <p>Email: contacto@danorteabogados.com</p>
-            <p>Teléfono: 55 1234 5678</p>
-            <p>Dirección: Av. Reforma 123, CDMX</p>
-        </div>
-    </section>
+        <!-- Sección Nuestra Firma -->
+        <section id="nosotros" class="py-16 md:py-24 bg-white fade-in-element">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">Nuestra Firma</h2>
+                <div class="section-title-underline"></div>
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/3 flex-shrink-0 flex justify-center">
+                        <img src="images/abogado.jpg" alt="Retrato del Lic. Daniel Ortega" class="rounded-2xl shadow-xl mx-auto w-64 md:w-80 object-cover" />
+                    </div>
+                    <div class="lg:w-2/3 text-center lg:text-left">
+                        <p class="text-lg text-gray-600 leading-relaxed"><strong>Lic. Daniel Ortega Guerra</strong></p>
+                        <p class="text-lg text-gray-600 leading-relaxed mt-2">Somos un despacho con más de <strong>25 años de ejercicio profesional</strong> en materia civil, administrativa, laboral, mercantil y familiar. Nuestro objetivo es dar certeza jurídica, hablando con lealtad y garantizando una representación puntual y eficaz.</p>
+                        <p class="text-lg text-gray-600 leading-relaxed mt-4">Contamos con el servicio de <strong>peritos en documentos cuestionados</strong>, ofreciendo análisis experto para fortalecer sus casos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 DANORTE Abogados. Todos los derechos reservados.</p>
+        
+        <!-- Sección Servicios -->
+        <section id="servicios" class="py-16 md:py-24 bg-secondary fade-in-element">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Áreas de Práctica</h2>
+                <div class="section-title-underline"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <div class="service-item bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in-element"><i class="fas fa-gavel text-4xl text-primary mb-4"></i><h3 class="text-xl font-bold mb-2">Asuntos Civiles</h3><p class="text-gray-600">Contratos, propiedades, herencias, y responsabilidades.</p></div>
+                    <div class="service-item bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in-element"><i class="fas fa-handshake text-4xl text-primary mb-4"></i><h3 class="text-xl font-bold mb-2">Asuntos Mercantiles</h3><p class="text-gray-600">Sociedades, contratos, litigio empresarial y derecho corporativo.</p></div>
+                    <div class="service-item bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in-element"><i class="fas fa-briefcase text-4xl text-primary mb-4"></i><h3 class="text-xl font-bold mb-2">Asuntos Laborales</h3><p class="text-gray-600">Despidos, contratos, acoso laboral y seguridad social.</p></div>
+                    <div class="service-item bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in-element"><i class="fas fa-landmark text-4xl text-primary mb-4"></i><h3 class="text-xl font-bold mb-2">Derecho Administrativo</h3><p class="text-gray-600">Actos de autoridad, licitaciones y regulaciones.</p></div>
+                    <div class="service-item bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in-element"><i class="fas fa-users text-4xl text-primary mb-4"></i><h3 class="text-xl font-bold mb-2">Derecho Familiar</h3><p class="text-gray-600">Divorcio, pensión, custodia y sucesiones.</p></div>
+                    <div class="service-item bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in-element"><i class="fas fa-file-signature text-4xl text-primary mb-4"></i><h3 class="text-xl font-bold mb-2">Peritos en Documentos Cuestionados</h3><p class="text-gray-600">Análisis pericial de firmas y documentos cuestionados.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Cobertura -->
+        <section id="cobertura" class="py-16 md:py-24 bg-white fade-in-element">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestra Cobertura</h2>
+                 <div class="section-title-underline"></div>
+                 <p class="text-lg text-gray-600 mb-8">Ofrecemos nuestros servicios legales en las siguientes localidades:</p>
+                 <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                     <span class="bg-secondary text-gray-700 text-lg font-medium px-6 py-3 rounded-full shadow-sm"><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Querétaro</span>
+                     <span class="bg-secondary text-gray-700 text-lg font-medium px-6 py-3 rounded-full shadow-sm"><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Estado de México</span>
+                     <span class="bg-secondary text-gray-700 text-lg font-medium px-6 py-3 rounded-full shadow-sm"><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Ciudad de México</span>
+                     <span class="bg-secondary text-gray-700 text-lg font-medium px-6 py-3 rounded-full shadow-sm"><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Chihuahua</span>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="py-16 md:py-24 bg-secondary fade-in-element">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">Contáctanos</h2>
+                <div class="section-title-underline"></div>
+                <div class="flex flex-col lg:flex-row gap-12 bg-white p-8 rounded-lg shadow-xl">
+                    <div class="lg:w-1/2 space-y-6">
+                         <h3 class="text-2xl font-bold text-gray-800">Información de Contacto</h3>
+                         <p class="flex items-start text-lg"><i class="fas fa-phone text-primary mt-1 mr-4 w-5"></i><span><strong>Oficina:</strong> <a href="tel:+527222773586" class="hover:text-primary">+52 722 277 3586</a></span></p>
+                         <p class="flex items-start text-lg"><i class="fab fa-whatsapp text-primary mt-1 mr-4 w-5"></i><span><strong>Celular:</strong> <a href="https://wa.me/527223508556" target="_blank" class="hover:text-primary">+52 722 350 8556</a></span></p>
+                         <p class="flex items-start text-lg"><i class="fas fa-envelope text-primary mt-1 mr-4 w-5"></i><a href="mailto:danorte30@gmail.com" class="hover:text-primary">danorte30@gmail.com</a></p>
+                         <p class="flex items-start text-lg"><i class="fas fa-map-marked-alt text-primary mt-1 mr-4 w-5"></i>Privada Eulalio Gutiérrez 122, Ampliación Lázaro Cárdenas, 50180 Toluca de Lerdo, México</p>
+                         <p class="flex items-start text-lg"><i class="fas fa-clock text-primary mt-1 mr-4 w-5"></i>Lunes a Viernes de 9:00 a 18:00 hrs</p>
+                         <div class="mt-8 rounded-lg overflow-hidden shadow-md">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3313961844683!2d-99.65080392546008!3d19.267949545919862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd899da9a08325%3A0x1689622980f20c43!2sEulalio%20Guti%C3%A9rrez%20120%2C%20Amp%20L%C3%A1zaro%20C%C3%A1rdenas%2C%2050180%20Toluca%20de%20Lerdo%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1749791255025!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Envía un Mensaje</h3>
+                         <form id="contact-form" action="#" method="POST" class="space-y-6">
+                            <div><label for="nombre" class="block text-sm font-bold text-gray-700 mb-2">Nombre</label><input type="text" id="nombre" name="nombre" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></div>
+                            <div><label for="email" class="block text-sm font-bold text-gray-700 mb-2">Correo</label><input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></div>
+                            <div><label for="telefono" class="block text-sm font-bold text-gray-700 mb-2">Teléfono</label><input type="tel" id="telefono" name="telefono" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></div>
+                            <div><label for="mensaje" class="block text-sm font-bold text-gray-700 mb-2">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></textarea></div>
+                            <div><button type="submit" class="w-full btn-primary font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">Enviar Mensaje</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <p>&copy; 2025 DANORTE ABOGADOS. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
-    <script>
-        const toggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        toggle.addEventListener('click', () => {
-            mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
-        });
-    </script>
-
+    <script src="script/script.js"></script>
 </body>
 </html>
